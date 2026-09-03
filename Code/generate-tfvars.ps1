@@ -1,5 +1,7 @@
-$csvFile = ".\rg.csv"
-$tfvarsFile = ".\terraform.tfvars"
+$codePath = Join-Path $env:BUILD_SOURCESDIRECTORY "Code"
+
+$csvFile = Join-Path $codePath "rg.csv"
+$tfvarsFile = Join-Path $codePath "terraform.tfvars"
 
 $resourceGroups = Import-Csv $csvFile
 
